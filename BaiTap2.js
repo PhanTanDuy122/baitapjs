@@ -11,6 +11,7 @@ function snail(list) {
         for (let i = left; i < right; i++) {
             result.push(list[left][i]);            
         }
+        
         top++;
         for (let i = top; i < bottom; i++){   
             result.push(list[i][right - 1]);
