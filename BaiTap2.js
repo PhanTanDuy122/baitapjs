@@ -11,20 +11,23 @@ function snail(list) {
         for (let i = left; i < right; i++) {
             result.push(list[left][i]);            
         }
+
         top++;
         for (let i = top; i < bottom; i++){   
             result.push(list[i][right - 1]);
         }
+
         right--;
         for (let i = right - 1; i >= left; i--) {
             result.push(list[bottom - 1][i]);          
         }
+
         bottom--;
         for (let i = bottom - 1; i >= top; i--) {
             result.push(list[i][left]);
         }
+
         left++;
-        console.log(bottom, top, left, right);
     }
     return result;
 }
